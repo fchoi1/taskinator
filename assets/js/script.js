@@ -1,7 +1,10 @@
-var buttonEl = document.querySelector("#save-task");
+var formEI = document.querySelector("#task-form");
 var tasksToDoEl = document.querySelector("#tasks-to-do");
 
-var createTaskHandler = function(){
+var createTaskHandler = function(event){
+
+    event.preventDefault(); // Stops the page from reloading when submit
+
     var taskItemEL = document.createElement("li"); // Create child element
     taskItemEL.textContent = "This is a new task"; // Text to dipsplay
     taskItemEL.className = "task-item"; //Class for CSS
@@ -10,7 +13,9 @@ var createTaskHandler = function(){
 }
 
 // Can be used as an element object, but this is a method in this case, 
-buttonEl.addEventListener("click", createTaskHandler);
+formEI.addEventListener("submit", createTaskHandler);
+
+
   
 
  
