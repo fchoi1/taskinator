@@ -53,7 +53,7 @@ var createTaskEl = function(taskDataObj){
 }
 
 // Can be used as an element object, but this is a method in this case, 
-formEI.addEventListener("submit", taskFormHandler);
+formEl.addEventListener("submit", taskFormHandler);
 
  
   
